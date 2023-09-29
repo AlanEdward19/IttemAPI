@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IttemAPI", "IttemAPI\IttemAPI.csproj", "{ECCCEE1D-139B-4C52-BE10-CA4B94767DB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IttemAPI", "IttemAPI\IttemAPI.csproj", "{ECCCEE1D-139B-4C52-BE10-CA4B94767DB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{3C36C50B-C4AC-4DD1-8718-1DAE3B520F97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{3C36C50B-C4AC-4DD1-8718-1DAE3B520F97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{21D07418-40E7-4006-843D-08779A73C89A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{21D07418-40E7-4006-843D-08779A73C89A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{7CA77299-18A2-4BE8-9AE3-BE217A575293}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{7CA77299-18A2-4BE8-9AE3-BE217A575293}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C8CEBCD8-D66D-4504-BEF6-6C35EEE4C4FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7CA77299-18A2-4BE8-9AE3-BE217A575293}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CA77299-18A2-4BE8-9AE3-BE217A575293}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CA77299-18A2-4BE8-9AE3-BE217A575293}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8CEBCD8-D66D-4504-BEF6-6C35EEE4C4FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8CEBCD8-D66D-4504-BEF6-6C35EEE4C4FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8CEBCD8-D66D-4504-BEF6-6C35EEE4C4FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8CEBCD8-D66D-4504-BEF6-6C35EEE4C4FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
