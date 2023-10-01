@@ -19,6 +19,16 @@
     <Folder Include="Commands\Instructor\CreateInstructor\" />
     <Folder Include="Commands\Polo\CreatePolo\" />
     <Folder Include="Commands\Student\CreateStudent\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Queries\Assessment\GetAssessment\" />
+    <Folder Include="Queries\Attendance\GetAttendance\" />
+    <Folder Include="Queries\CertificateIssuance\GetCertificateIssuance\" />
+    <Folder Include="Queries\Class\GetClass\" />
+    <Folder Include="Queries\Company\GetCompany\" />
+    <Folder Include="Queries\Function\GetFunction\" />
+    <Folder Include="Queries\Instructor\GetInstructor\" />
+    <Folder Include="Queries\Polo\GetPolo\" />
+    <Folder Include="Queries\Student\GetStudent\" />
     <Folder Include="Validators\" />
   </ItemGroup>
 
