@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Services.Commands.Company.CreateCompany;
+using Services.Queries.Company.GetCompany;
 
 namespace IttemAPI.Controllers
 {
@@ -9,14 +10,16 @@ namespace IttemAPI.Controllers
     public class CompanyController : ControllerBase
     {
         private readonly CreateCompanyCommandHandler _createCommandHandler;
+        private readonly GetCompanyQueryHandler _queryHandler;
 
-        public CompanyController(CreateCompanyCommandHandler createCommandHandler)
+        public CompanyController(CreateCompanyCommandHandler createCommandHandler, GetCompanyQueryHandler queryHandler)
         {
             _createCommandHandler = createCommandHandler;
+            _queryHandler = queryHandler;
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get() => Ok();
+        public async Task<IActionResult> Get(string? cnpj) => Ok(await _queryHandler.Get(cnpj));
 
         [HttpPost]
         public async Task<IActionResult> Create(CreateCompanyCommand command) =>
