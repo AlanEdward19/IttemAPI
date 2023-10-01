@@ -8,6 +8,14 @@ using Services.Commands.Function.CreateFunction;
 using Services.Commands.Instructor.CreateInstructor;
 using Services.Commands.Polo.CreatePolo;
 using Services.Commands.Student.CreateStudent;
+using Services.Queries.Assessment.GetAssessment;
+using Services.Queries.Attendance.GetAttendance;
+using Services.Queries.Class.GetClass;
+using Services.Queries.Company.GetCompany;
+using Services.Queries.Function.GetFunction;
+using Services.Queries.Instructor.GetInstructor;
+using Services.Queries.Polo.GetPolo;
+using Services.Queries.Student.GetStudent;
 
 namespace IttemAPI.Configurations;
 
@@ -40,6 +48,15 @@ public static class Service
         services.AddScoped<CreateStudentCommandHandler>();
         services.AddScoped<CreateAttendanceCommandHandler>();
         services.AddScoped<CreateAssessmentCommandHandler>();
+
+        services.AddScoped<GetAssessmentQueryHandler>();
+        services.AddScoped<GetAttendanceQueryHandler>();
+        services.AddScoped<GetClassQueryHandler>();
+        services.AddScoped<GetCompanyQueryHandler>();
+        services.AddScoped<GetFunctionQueryHandler>();
+        services.AddScoped<GetInstructorQueryHandler>();
+        services.AddScoped<GetPoloQueryHandler>();
+        services.AddScoped<GetStudentQueryHandler>();
 
         return services;
     }
