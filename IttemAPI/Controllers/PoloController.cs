@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Services.Commands.Polo.CreatePolo;
 
 namespace IttemAPI.Controllers
 {
@@ -7,12 +8,18 @@ namespace IttemAPI.Controllers
     [ApiController]
     public class PoloController : ControllerBase
     {
-        public PoloController()
+        private readonly CreatePoloCommandHandler _createCommandHandler;
+
+        public PoloController(CreatePoloCommandHandler createCommandHandler)
         {
-            
+            _createCommandHandler = createCommandHandler;
         }
 
         [HttpGet]
         public async Task<IActionResult> Get() => Ok();
+
+        [HttpPost]
+        public async Task<IActionResult> Create(CreatePoloCommand command) =>
+            Ok(await _createCommandHandler.CreatePolo(command));
     }
 }

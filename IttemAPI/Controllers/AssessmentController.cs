@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Services.Commands.Assessment.CreateAssessment;
 
 namespace IttemAPI.Controllers
 {
@@ -7,12 +8,18 @@ namespace IttemAPI.Controllers
     [ApiController]
     public class AssessmentController : ControllerBase
     {
-        public AssessmentController()
+        private readonly CreateAssessmentCommandHandler _createCommandHandler;
+
+        public AssessmentController(CreateAssessmentCommandHandler createCommandHandler)
         {
-            
+            _createCommandHandler = createCommandHandler;
         }
 
         [HttpGet]
         public async Task<IActionResult> Get() => Ok();
+
+        [HttpPost]
+        public async Task<IActionResult> Create(CreateAssessmentCommand command) =>
+            Ok(await _createCommandHandler.CreateAssessment(command));
     }
 }
