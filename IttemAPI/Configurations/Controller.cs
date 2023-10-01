@@ -12,7 +12,7 @@ public static class Controller
             .AddControllers()
             .AddFluentValidation(c =>
             {
-                c.RegisterValidatorsFromAssemblyContaining<TrainingValidator>();
+                //c.RegisterValidatorsFromAssemblyContaining<TrainingValidator>();
                 c.ValidatorOptions.DefaultClassLevelCascadeMode = CascadeMode.Stop;
             });
 
