@@ -9,4 +9,5 @@ public class Class
     public Guid InstructorId { get; set; }
 
     public virtual Instructor Instructor { get; set; }
+    public virtual IEnumerable<Student> Students { get; set; }
 }

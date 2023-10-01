@@ -9,7 +9,7 @@ public class Student
     public DateTime BirthDate { get; set; }
 
     [ForeignKey(nameof(Company))]
-    public Guid CompanyId { get; set; }
+    public string CompanyId { get; set; }
     [ForeignKey(nameof(Function))]
     public Guid FunctionId { get; set; }
     [ForeignKey(nameof(Class))]
@@ -29,11 +29,14 @@ public class Student
     public int FinalDayTrainingIntroduction { get; set; }
     public int FirstDayOfWeeklyTraining { get; set; }
     public EWeekDay DayOfTrainingWeek { get; set; }
-    public TimeSpan ScheduleTrainingInitialEFinal { get; set; }
+    public string ScheduleTrainingInitialEFinal { get; set; }
 
 
     public virtual Polo Polo { get; set; }
     public virtual Class Class { get; set; }
     public virtual Function Function { get; set; }
     public virtual Company Company { get; set; }
+
+    public virtual IEnumerable<Attendance> Attendances { get; set; }
+    public virtual IEnumerable<Assessment> Assessments { get; set; }
 }

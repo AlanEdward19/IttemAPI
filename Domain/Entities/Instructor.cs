@@ -6,4 +6,6 @@ public class Instructor
     public Guid Id { get; set; }
     public string Name { get; set; }
     public string PhotoPath { get; set; }
+
+    public virtual IEnumerable<Class>? Classes { get; set; }
 }
