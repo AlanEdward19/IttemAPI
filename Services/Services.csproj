@@ -12,6 +12,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Commands\Assessment\CreateAssessment\" />
+    <Folder Include="Commands\Attendance\CreateAttendance\" />
+    <Folder Include="Commands\CertificateIssuance\CreateCertificate\" />
+    <Folder Include="Commands\Function\CreateFunction\" />
+    <Folder Include="Commands\Instructor\CreateInstructor\" />
+    <Folder Include="Commands\Polo\CreatePolo\" />
+    <Folder Include="Commands\Student\CreateStudent\" />
     <Folder Include="Validators\" />
   </ItemGroup>
 
