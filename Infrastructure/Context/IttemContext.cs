@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Context;
 
-public class Context : DbContext
+public class IttemContext : DbContext
 {
-    public Context(DbContextOptions<Context> options) : base(options)
+    public IttemContext(DbContextOptions<IttemContext> options) : base(options)
     { }
 
     #region DbSets
