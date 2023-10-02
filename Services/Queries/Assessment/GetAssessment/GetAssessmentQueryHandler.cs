@@ -33,7 +33,8 @@ public class GetAssessmentQueryHandler
                 Module = assessment.Module,
                 Participation = assessment.Participation,
                 SkillTechnique = assessment.SkillTechnique,
-                StudentName = assessment.Student.Name
+                StudentName = assessment.Student.Name,
+                AssessmentDate = assessment.AssessmentDate
             });
         }
 
