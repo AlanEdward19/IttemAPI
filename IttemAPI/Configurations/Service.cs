@@ -8,6 +8,7 @@ using Services.Commands.Function.CreateFunction;
 using Services.Commands.Instructor.CreateInstructor;
 using Services.Commands.Polo.CreatePolo;
 using Services.Commands.Student.CreateStudent;
+using Services.Commands.Student.DeleteStudent;
 using Services.Queries.Assessment.GetAssessment;
 using Services.Queries.Attendance.GetAttendance;
 using Services.Queries.Class.GetClass;
@@ -48,6 +49,8 @@ public static class Service
         services.AddScoped<CreateStudentCommandHandler>();
         services.AddScoped<CreateAttendanceCommandHandler>();
         services.AddScoped<CreateAssessmentCommandHandler>();
+
+        services.AddScoped<DeleteStudentCommandHandler>();
 
         services.AddScoped<GetAssessmentQueryHandler>();
         services.AddScoped<GetAttendanceQueryHandler>();
