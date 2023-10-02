@@ -20,6 +20,7 @@ public class CreateFunctionCommandHandler
 
         return new
         {
+            Operation = "Create",
             parsedEntity.Id,
             Function = parsedEntity.Name
         };

@@ -20,6 +20,7 @@ public class CreateCompanyCommandHandler
 
         return new
         {
+            Operation = "Create",
             parsedEntity.Cnpj,
             Company = parsedEntity.Name
         };

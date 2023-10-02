@@ -20,6 +20,7 @@ public class CreateInstructorCommandHandler
 
         return new
         {
+            Operation = "Create",
             parsedEntity.Id,
             Instructor = parsedEntity.Name
         };

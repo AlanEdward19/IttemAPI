@@ -20,6 +20,7 @@ public class CreatePoloCommandHandler
 
         return new
         {
+            Operation = "Create",
             parsedEntity.Id,
             Polo = parsedEntity.Name
         };

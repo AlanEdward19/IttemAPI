@@ -20,6 +20,7 @@ public class CreateStudentCommandHandler
 
         return new
         {
+            Operation = "Create",
             parsedEntity.Cpf,
             Student = parsedEntity.Name
         };
