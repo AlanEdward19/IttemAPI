@@ -20,6 +20,7 @@ public class CreateAssessmentCommandHandler
 
         return new
         {
+            Operation = "Create",
             parsedEntity.Id
         };
     }

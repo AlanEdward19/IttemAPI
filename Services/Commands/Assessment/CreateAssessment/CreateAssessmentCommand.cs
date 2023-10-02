@@ -9,6 +9,7 @@ public class CreateAssessmentCommand
     public int Participation { get; set; }
     public int InterpersonalRelationship { get; set; }
     public int GoalFulfillment { get; set; }
+    public DateTime AssessmentDate { get; set; }
 
     public Domain.Entities.Assessment ToEntity()
     {
@@ -21,7 +22,8 @@ public class CreateAssessmentCommand
             Participation = this.Participation,
             InterpersonalRelationship = this.InterpersonalRelationship,
             GoalFulfillment = this.GoalFulfillment,
-            StudentId = StudentCpf
+            StudentId = StudentCpf,
+            AssessmentDate = AssessmentDate
         };
     }
 }
