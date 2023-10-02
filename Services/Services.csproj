@@ -13,12 +13,14 @@
 
   <ItemGroup>
     <Folder Include="Commands\Assessment\CreateAssessment\" />
+    <Folder Include="Commands\Assessment\DeleteAssessment\" />
     <Folder Include="Commands\Attendance\CreateAttendance\" />
     <Folder Include="Commands\CertificateIssuance\CreateCertificate\" />
     <Folder Include="Commands\Function\CreateFunction\" />
     <Folder Include="Commands\Instructor\CreateInstructor\" />
     <Folder Include="Commands\Polo\CreatePolo\" />
     <Folder Include="Commands\Student\CreateStudent\" />
+    <Folder Include="Commands\Student\DeleteStudent\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Queries\Assessment\GetAssessment\" />
     <Folder Include="Queries\Attendance\GetAttendance\" />
