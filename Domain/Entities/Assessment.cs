@@ -12,6 +12,7 @@ public class Assessment
     public int Participation { get; set; }
     public int InterpersonalRelationship { get; set; }
     public int GoalFulfillment { get; set; }
+    public DateTime AssessmentDate { get; set; }
 
     public virtual Student Student { get; set; }
 }
