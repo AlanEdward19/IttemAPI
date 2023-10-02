@@ -20,6 +20,7 @@ public class CreateAttendanceCommandHandler
 
         return new
         {
+            Operation = "Create",
             parsedEntity.Id,
             Type = parsedEntity.Type
         };

@@ -8,6 +8,7 @@ public class CreateAttendanceCommand
     public string Level { get; set; }
     public string Module { get; set; }
     public EAttendance Type { get; set; }
+    public DateTime AttendanceDate { get; set; }
 
     public Domain.Entities.Attendance ToEntity()
     {
@@ -18,7 +19,7 @@ public class CreateAttendanceCommand
             Level = this.Level,
             Module = this.Module,
             Type = this.Type,
-            Date = DateTime.SpecifyKind(DateTime.Today, DateTimeKind.Utc)
+            Date = DateTime.SpecifyKind(AttendanceDate, DateTimeKind.Utc)
         };
     }
 }
