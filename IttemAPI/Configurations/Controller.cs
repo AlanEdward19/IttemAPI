@@ -1,7 +1,7 @@
-﻿using System.Text.Json.Serialization;
-using FluentValidation;
+﻿using FluentValidation;
 using FluentValidation.AspNetCore;
 using Services.Validators.Instructor;
+using System.Text.Json.Serialization;
 
 namespace IttemAPI.Configurations;
 

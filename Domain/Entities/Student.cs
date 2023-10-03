@@ -1,6 +1,4 @@
-﻿using System.Runtime.ConstrainedExecution;
-
-namespace Domain.Entities;
+﻿namespace Domain.Entities;
 
 public class Student
 {
@@ -37,9 +35,9 @@ public class Student
     public virtual Class Class { get; set; }
     public virtual Function Function { get; set; }
     public virtual Company Company { get; set; }
-    
+
     public virtual IEnumerable<CertificateIssuance> CertificateIssuances { get; set; }
     public virtual IEnumerable<Attendance> Attendances { get; set; }
     public virtual IEnumerable<Assessment> Assessments { get; set; }
-    
+
 }

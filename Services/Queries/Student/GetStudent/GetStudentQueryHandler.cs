@@ -1,5 +1,4 @@
-﻿using Domain.Entities;
-using Infrastructure.Context;
+﻿using Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using Services.ViewModels;
 

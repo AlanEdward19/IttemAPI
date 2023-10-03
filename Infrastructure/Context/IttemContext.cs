@@ -56,7 +56,7 @@ public class IttemContext : DbContext
 
     public DbSet<Assessment> Assessments { get; set; }
     public DbSet<Attendance> Attendances { get; set; }
-    public DbSet<CertificateIssuance> CertificateIssuances { get; set;}
+    public DbSet<CertificateIssuance> CertificateIssuances { get; set; }
     public DbSet<Class> Classes { get; set; }
     public DbSet<Company> Companies { get; set; }
     public DbSet<Function> Functions { get; set; }

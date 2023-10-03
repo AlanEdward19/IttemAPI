@@ -20,7 +20,7 @@ public class GetAttendanceQueryHandler
             ? await _dbContext.Attendances.Include(x => x.Student).ToListAsync()
             : await _dbContext.Attendances.Include(x => x.Student).Where(x => x.StudentId.Equals(studentId))
                 .ToListAsync();
-        
+
         foreach (var attendance in database)
         {
             result.Add(new()

@@ -1,8 +1,6 @@
-﻿using Domain.Entities;
-using Domain.Enums;
+﻿using Domain.Enums;
 using Domain.Interfaces;
 using Infrastructure.Context;
-using Services.Auth;
 
 namespace Services.Commands.Instructor.CreateInstructor;
 

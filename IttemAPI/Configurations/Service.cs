@@ -1,5 +1,4 @@
-﻿using System.Text;
-using Domain.Interfaces;
+﻿using Domain.Interfaces;
 using Infrastructure.Context;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +22,7 @@ using Services.Queries.Instructor.GetInstructor;
 using Services.Queries.Login;
 using Services.Queries.Polo.GetPolo;
 using Services.Queries.Student.GetStudent;
+using System.Text;
 
 namespace IttemAPI.Configurations;
 
@@ -59,6 +59,8 @@ public static class Service
         services.AddScoped<CreateAssessmentCommandHandler>();
 
         services.AddScoped<DeleteStudentCommandHandler>();
+
+        services.AddScoped<UpdateStudentCommandHandler>();
 
         services.AddScoped<LoginQueryHandler>();
 
