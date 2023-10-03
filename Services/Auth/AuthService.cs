@@ -1,10 +1,10 @@
-﻿using System.IdentityModel.Tokens.Jwt;
+﻿using Domain.Interfaces;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
-using Domain.Interfaces;
-using Microsoft.Extensions.Configuration;
 using System.Text;
-using Microsoft.IdentityModel.Tokens;
 
 namespace Services.Auth;
 
@@ -34,7 +34,7 @@ public class AuthService : IAuthService
         var token = new JwtSecurityToken(
             issuer: issuer,
             audience: audience,
-            expires: DateTime.Now.AddMinutes(3),
+            expires: DateTime.Now.AddMinutes(30),
             signingCredentials: credentials,
             claims: claims);
 
