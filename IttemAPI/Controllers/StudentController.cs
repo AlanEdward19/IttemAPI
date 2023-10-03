@@ -1,12 +1,15 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Services.Commands.Student.CreateStudent;
 using Services.Commands.Student.DeleteStudent;
 using Services.Queries.Student.GetStudent;
+using System.Data;
 
 namespace IttemAPI.Controllers
 {
     [Route("[controller]")]
+    [Authorize(Roles = "admin, worker")]
     [ApiController]
     public class StudentController : ControllerBase
     {

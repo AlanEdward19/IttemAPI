@@ -1,12 +1,15 @@
 ﻿using Infrastructure.Context;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Services.Commands.Class.CreateClass;
 using Services.Queries.Class.GetClass;
+using System.Data;
 
 namespace IttemAPI.Controllers
 {
     [Route("[controller]")]
+    [Authorize(Roles = "admin, worker")]
     [ApiController]
     public class ClassController : ControllerBase
     {

@@ -1,11 +1,14 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Services.Commands.Attendance.CreateAttendance;
 using Services.Queries.Attendance.GetAttendance;
+using System.Data;
 
 namespace IttemAPI.Controllers
 {
     [Route("[controller]")]
+    [Authorize(Roles = "admin, worker")]
     [ApiController]
     public class AttendanceController : ControllerBase
     {
