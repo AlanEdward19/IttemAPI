@@ -1,5 +1,10 @@
-﻿using Infrastructure.Context;
+﻿using System.Text;
+using Domain.Interfaces;
+using Infrastructure.Context;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Services.Auth;
 using Services.Commands.Assessment.CreateAssessment;
 using Services.Commands.Attendance.CreateAttendance;
 using Services.Commands.Class.CreateClass;
@@ -15,6 +20,7 @@ using Services.Queries.Class.GetClass;
 using Services.Queries.Company.GetCompany;
 using Services.Queries.Function.GetFunction;
 using Services.Queries.Instructor.GetInstructor;
+using Services.Queries.Login;
 using Services.Queries.Polo.GetPolo;
 using Services.Queries.Student.GetStudent;
 
@@ -41,6 +47,8 @@ public static class Service
 
         #endregion
 
+        services.AddScoped<IAuthService, AuthService>();
+
         services.AddScoped<CreateInstructorCommandHandler>();
         services.AddScoped<CreateClassCommandHandler>();
         services.AddScoped<CreateCompanyCommandHandler>();
@@ -52,6 +60,8 @@ public static class Service
 
         services.AddScoped<DeleteStudentCommandHandler>();
 
+        services.AddScoped<LoginQueryHandler>();
+
         services.AddScoped<GetAssessmentQueryHandler>();
         services.AddScoped<GetAttendanceQueryHandler>();
         services.AddScoped<GetClassQueryHandler>();
@@ -60,6 +70,24 @@ public static class Service
         services.AddScoped<GetInstructorQueryHandler>();
         services.AddScoped<GetPoloQueryHandler>();
         services.AddScoped<GetStudentQueryHandler>();
+
+        services
+            .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+
+                    ValidIssuer = configuration["Jwt:Issuer"],
+                    ValidAudience = configuration["Jwt:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey
+                        (Encoding.UTF8.GetBytes(configuration["Jwt:Key"]))
+                };
+            });
 
         return services;
     }
