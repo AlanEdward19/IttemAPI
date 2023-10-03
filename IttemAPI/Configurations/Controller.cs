@@ -1,6 +1,7 @@
 ﻿using System.Text.Json.Serialization;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using Services.Validators.Instructor;
 
 namespace IttemAPI.Configurations;
 
@@ -12,7 +13,7 @@ public static class Controller
             .AddControllers()
             .AddFluentValidation(c =>
             {
-                //c.RegisterValidatorsFromAssemblyContaining<TrainingValidator>();
+                c.RegisterValidatorsFromAssemblyContaining<CreateInstructorCommandValidator>();
                 c.ValidatorOptions.DefaultClassLevelCascadeMode = CascadeMode.Stop;
             });
 
