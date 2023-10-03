@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Services.Commands.Student.CreateStudent;
 using Services.Commands.Student.DeleteStudent;
 using Services.Queries.Student.GetStudent;
-using System.Data;
 
 namespace IttemAPI.Controllers
 {
@@ -14,12 +12,14 @@ namespace IttemAPI.Controllers
     public class StudentController : ControllerBase
     {
         private readonly CreateStudentCommandHandler _createCommandHandler;
+        private readonly UpdateStudentCommandHandler _updateCommandHandler;
         private readonly DeleteStudentCommandHandler _deleteCommandHandler;
         private readonly GetStudentQueryHandler _queryHandler;
 
-        public StudentController(CreateStudentCommandHandler createCommandHandler, DeleteStudentCommandHandler deleteCommandHandler, GetStudentQueryHandler queryHandler)
+        public StudentController(CreateStudentCommandHandler createCommandHandler, UpdateStudentCommandHandler updateCommandHandler, DeleteStudentCommandHandler deleteCommandHandler, GetStudentQueryHandler queryHandler)
         {
             _createCommandHandler = createCommandHandler;
+            _updateCommandHandler = updateCommandHandler;
             _deleteCommandHandler = deleteCommandHandler;
             _queryHandler = queryHandler;
         }
@@ -37,5 +37,9 @@ namespace IttemAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CreateStudentCommand command) =>
             Ok(await _createCommandHandler.CreateStudent(command));
+
+        [HttpPut]
+        public async Task<IActionResult> Update([FromBody] UpdateStudentCommand command, [FromQuery] string cpf) =>
+            Ok(await _updateCommandHandler.UpdateStudent(command, cpf));
     }
 }
