@@ -1,6 +1,4 @@
-﻿using Infrastructure.Context;
-
-namespace Services.Commands.Polo.CreatePolo;
+﻿namespace Services.Commands.Polo.CreatePolo;
 
 public class CreatePoloCommandHandler
 {

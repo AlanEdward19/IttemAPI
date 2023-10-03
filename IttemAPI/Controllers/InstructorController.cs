@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Services.Commands.Instructor.CreateInstructor;
-using Services.Queries.Instructor.GetInstructor;
-using Services.Queries.Login;
 
 namespace IttemAPI.Controllers
 {

@@ -1,5 +1,4 @@
-﻿using Infrastructure.Context;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Services.Commands.Assessment.DeleteAssessment;
 

@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Services.Commands.Polo.CreatePolo;
-using Services.Queries.Polo.GetPolo;
 
 namespace IttemAPI.Controllers
 {

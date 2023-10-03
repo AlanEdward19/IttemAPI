@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Services.Commands.Attendance.CreateAttendance;
-using Services.Queries.Attendance.GetAttendance;
 
 namespace IttemAPI.Controllers
 {

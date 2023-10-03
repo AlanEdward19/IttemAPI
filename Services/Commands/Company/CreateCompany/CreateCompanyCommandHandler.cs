@@ -1,6 +1,4 @@
-﻿using Infrastructure.Context;
-
-namespace Services.Commands.Company.CreateCompany;
+﻿namespace Services.Commands.Company.CreateCompany;
 
 public class CreateCompanyCommandHandler
 {

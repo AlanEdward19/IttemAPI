@@ -1,8 +1,4 @@
-﻿using Domain.Interfaces;
-using Services.Queries.Instructor.GetInstructor;
-using Services.ViewModels;
-
-namespace Services.Queries.Login;
+﻿namespace Services.Queries.Login;
 
 public class LoginQueryHandler
 {

@@ -1,7 +1,4 @@
-﻿using Domain.Interfaces;
-using Infrastructure.Context;
-
-namespace Services.Commands.Instructor.CreateInstructor;
+﻿namespace Services.Commands.Instructor.CreateInstructor;
 
 public class CreateInstructorCommandHandler
 {

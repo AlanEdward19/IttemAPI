@@ -1,6 +1,4 @@
-﻿using Infrastructure.Context;
-
-namespace Services.Commands.Attendance.CreateAttendance;
+﻿namespace Services.Commands.Attendance.CreateAttendance;
 
 public class CreateAttendanceCommandHandler
 {

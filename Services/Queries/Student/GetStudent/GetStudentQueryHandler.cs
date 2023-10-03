@@ -1,6 +1,4 @@
-﻿using Infrastructure.Context;
-using Microsoft.EntityFrameworkCore;
-using Services.ViewModels;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Services.Queries.Student.GetStudent;
 

@@ -1,6 +1,4 @@
-﻿using Infrastructure.Context;
-
-namespace Services.Commands.Student.CreateStudent;
+﻿namespace Services.Commands.Student.CreateStudent;
 
 public class UpdateStudentCommandHandler
 {

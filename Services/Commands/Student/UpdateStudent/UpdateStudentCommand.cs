@@ -1,6 +1,4 @@
-﻿using Domain.Enums;
-using Infrastructure.Context;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Services.Commands.Student.CreateStudent;
 public class UpdateStudentCommand

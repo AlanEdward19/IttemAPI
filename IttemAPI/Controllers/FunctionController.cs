@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Services.Commands.Function.CreateFunction;
-using Services.Queries.Function.GetFunction;
 
 namespace IttemAPI.Controllers
 {

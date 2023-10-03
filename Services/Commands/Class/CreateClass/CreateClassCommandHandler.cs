@@ -1,6 +1,4 @@
-﻿using Infrastructure.Context;
-
-namespace Services.Commands.Class.CreateClass;
+﻿namespace Services.Commands.Class.CreateClass;
 
 public class CreateClassCommandHandler
 {

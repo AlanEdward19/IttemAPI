@@ -1,6 +1,4 @@
-﻿using Domain.Enums;
-
-namespace Services.Commands.Student.CreateStudent;
+﻿namespace Services.Commands.Student.CreateStudent;
 public class CreateStudentCommand
 {
     public string Cpf { get; set; }

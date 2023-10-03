@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Services.Commands.Company.CreateCompany;
-using Services.Queries.Company.GetCompany;
 
 namespace IttemAPI.Controllers
 {

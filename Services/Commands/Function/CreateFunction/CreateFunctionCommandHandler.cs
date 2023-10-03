@@ -1,6 +1,4 @@
-﻿using Infrastructure.Context;
-
-namespace Services.Commands.Function.CreateFunction;
+﻿namespace Services.Commands.Function.CreateFunction;
 
 public class CreateFunctionCommandHandler
 {

@@ -1,6 +1,4 @@
-﻿using Infrastructure.Context;
-
-namespace Services.Commands.Assessment.CreateAssessment;
+﻿namespace Services.Commands.Assessment.CreateAssessment;
 
 public class CreateAssessmentCommandHandler
 {

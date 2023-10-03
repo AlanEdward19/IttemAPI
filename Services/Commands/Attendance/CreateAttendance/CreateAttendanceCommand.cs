@@ -1,6 +1,4 @@
-﻿using Domain.Enums;
-
-namespace Services.Commands.Attendance.CreateAttendance;
+﻿namespace Services.Commands.Attendance.CreateAttendance;
 
 public class CreateAttendanceCommand
 {

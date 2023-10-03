@@ -1,5 +1,4 @@
 ﻿using FluentValidation;
-using Services.Commands.Instructor.CreateInstructor;
 using System.Text.RegularExpressions;
 
 namespace Services.Validators.Instructor;

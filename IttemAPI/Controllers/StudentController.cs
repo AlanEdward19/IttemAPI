@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Services.Commands.Student.CreateStudent;
-using Services.Commands.Student.DeleteStudent;
-using Services.Queries.Student.GetStudent;
 
 namespace IttemAPI.Controllers
 {
