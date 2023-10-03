@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Services.Commands.Assessment.CreateAssessment;
 using Services.Commands.Assessment.DeleteAssessment;
 using Services.Queries.Assessment.GetAssessment;
-using System.Data;
 
 namespace IttemAPI.Controllers
 {
