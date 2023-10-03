@@ -27,7 +27,7 @@ public class GetClassQueryHandler
             {
                 Id = @class.Id,
                 InstructorId = @class.InstructorId,
-                InstructorName = @class.Instructor.Name,
+                InstructorName = $"{@class.Instructor.FirstName} {@class.Instructor.LastName}",
                 Name = @class.Name
             });
         }
