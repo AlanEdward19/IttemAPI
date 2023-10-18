@@ -26,9 +26,9 @@ jobs:
         run: |
           echo "Conteúdo do diretório atual:"
           ls -R
-          
+
       - name: Build with dotnet
-        run: dotnet build --configuration Release ../../IttemAPI/IttemAPI.sln
+        run: dotnet build --configuration Release ./IttemAPI.sln
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
