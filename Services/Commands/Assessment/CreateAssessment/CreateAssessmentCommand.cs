@@ -23,7 +23,7 @@ public class CreateAssessmentCommand
             InterpersonalRelationship = this.InterpersonalRelationship,
             GoalFulfillment = this.GoalFulfillment,
             StudentId = StudentCpf,
-            AssessmentDate = AssessmentDate
+            AssessmentDate = DateTime.SpecifyKind(AssessmentDate, DateTimeKind.Utc)
         };
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Services.Queries.CertificateIssuance.GetCertificateIssuance;
 using System.Text;
 
 namespace IttemAPI.Configurations;
@@ -38,6 +39,7 @@ public static class Service
         services.AddScoped<CreateAssessmentCommandHandler>();
 
         services.AddScoped<DeleteStudentCommandHandler>();
+        services.AddScoped<DeleteAssessmentCommandHandler>();
 
         services.AddScoped<UpdateStudentCommandHandler>();
 
@@ -51,6 +53,7 @@ public static class Service
         services.AddScoped<GetInstructorQueryHandler>();
         services.AddScoped<GetPoloQueryHandler>();
         services.AddScoped<GetStudentQueryHandler>();
+        services.AddScoped<GetCertificateIssuanceQueryHandler>();
 
         services
             .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

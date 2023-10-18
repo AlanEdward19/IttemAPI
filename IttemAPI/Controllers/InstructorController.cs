@@ -23,12 +23,13 @@ namespace IttemAPI.Controllers
         public async Task<IActionResult> Get(string? id) => Ok(await _queryHandler.Get(id));
 
         [HttpPost]
+        //[AllowAnonymous]
         public async Task<IActionResult> Create([FromBody] CreateInstructorCommand command) =>
             Ok(await _createCommandHandler.CreateInstructor(command));
 
-        [HttpGet("/login")]
+        [HttpPut("/login")]
         [AllowAnonymous]
-        public async Task<IActionResult> Login([FromQuery] LoginQuery query, CancellationToken cancellationToken) =>
+        public async Task<IActionResult> Login([FromBody] LoginQuery query, CancellationToken cancellationToken) =>
             Ok(await _loginHandler.Handle(query, cancellationToken));
     }
 }
