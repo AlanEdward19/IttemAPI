@@ -11,7 +11,7 @@ public static class Service
     public static IServiceCollection ConfigureServices(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContext<IttemContext>(options =>
-            options.UseNpgsql(configuration.GetConnectionString("Database")));
+            options.UseSqlServer("Server=tcp:iteemdatabase.database.windows.net,1433;Initial Catalog=iteemdatabase;Persist Security Info=False;User ID=AlanEdward19;Password=!Maionese0201;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
 
         #region CORS
 
