@@ -27,23 +27,23 @@ public class IttemContext : DbContext
         modelBuilder.Entity<Class>()
             .HasMany(c => c.Students)
             .WithOne(s => s.Class)
-            .OnDelete(DeleteBehavior.SetNull);
+            .OnDelete(DeleteBehavior.Cascade);
 
         modelBuilder.Entity<Company>()
             .HasMany(c => c.Students)
             .WithOne(s => s.Company)
-            .OnDelete(DeleteBehavior.SetNull);
+            .OnDelete(DeleteBehavior.Cascade);
 
         modelBuilder.Entity<Function>()
             .HasMany(f => f.Students)
             .WithOne(s => s.Function)
-            .OnDelete(DeleteBehavior.SetNull);
+            .OnDelete(DeleteBehavior.Cascade);
 
         modelBuilder.Entity<Student>()
             .HasOne(s => s.Polo)
             .WithMany(p => p.Students)
             .HasForeignKey(s => s.PoloId)
-            .OnDelete(DeleteBehavior.SetNull);
+            .OnDelete(DeleteBehavior.Cascade);
 
         // Adicione outras configurações do modelo conforme necessário...
 

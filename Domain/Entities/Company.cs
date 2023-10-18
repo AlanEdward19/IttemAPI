@@ -3,6 +3,8 @@
 public class Company
 {
     [Key]
+    [MaxLength(14)]
+
     public string Cnpj { get; set; }
     public string Name { get; set; }
 
