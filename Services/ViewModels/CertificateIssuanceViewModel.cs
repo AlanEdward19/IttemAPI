@@ -7,4 +7,5 @@ public class CertificateIssuanceViewModel
     public string StudentFunction { get; set; }
     public string InitialDate { get; set; }
     public string FinalDate { get; set; }
+    public bool IsQualified { get; set; }
 }
